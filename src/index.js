@@ -59,7 +59,6 @@ export default async ({ cache, markdownAST }) => {
             html = await transformer.getHTML(urlString);
             await cache.set(urlString, html);
           }
-
           node.type = `html`;
           node.value = html;
           node.children = undefined;
