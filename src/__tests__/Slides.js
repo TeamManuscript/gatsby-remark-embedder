@@ -12,11 +12,11 @@ cases(
       url: 'https://not-a-slides-url.com',
       valid: false,
     },
-    'non-Slides url ending with "slides.com"': {
+    "non-Slides url ending with 'slides.com'": {
       url: 'https://this-is-not-slides.com',
       valid: false,
     },
-    'non-Slides url ending with "slides.com" and having a username and deck-name': {
+    "non-Slides url ending with 'slides.com' and having a username and deck-name": {
       url: 'https://this-is-not-slides.com/kentcdodds/oss-we-want',
       valid: false,
     },
@@ -147,7 +147,7 @@ cases(
     },
     "user Deck url having 'www' subdomain": {
       url: 'https://www.slides.com/kentcdodds/oss-we-want',
-      iframe: 'https://www.slides.com/kentcdodds/oss-we-want/embed',
+      iframe: 'https://slides.com/kentcdodds/oss-we-want/embed',
     },
     "user Deck url having 'embed' as name": {
       url: 'https://slides.com/michaeldeboey/embed',
