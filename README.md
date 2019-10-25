@@ -19,9 +19,10 @@
 ## The problem
 
 Trying to embed well known services (like [CodePen][codepen],
-[CodeSandbox][codesandbox], [SoundCloud][soundcloud], [Twitter][twitter] or
-[YouTube][youtube]) into your [Gatsby][gatsby] website can be hard, since you
-have to know how this needs to be done for all of these different services.
+[CodeSandbox][codesandbox], [Slides][slides], [SoundCloud][soundcloud],
+[Twitter][twitter] or [YouTube][youtube]) into your [Gatsby][gatsby] website can
+be hard, since you have to know how this needs to be done for all of these
+different services.
 
 ## This solution
 
@@ -40,6 +41,7 @@ and replace it with the proper embed-code.
 - [Supported services](#supported-services)
   - [CodePen](#codepen)
   - [CodeSandbox](#codesandbox)
+  - [Slides](#slides)
   - [SoundCloud](#soundcloud)
   - [Twitter](#twitter)
   - [YouTube](#youtube)
@@ -90,7 +92,7 @@ https://codepen.io/team/codepen/pen/PNaGbb
 
 #### Result
 
-```md
+```html
 <iframe
   src="https://codepen.io/team/codepen/embed/preview/PNaGbb"
   style="width:100%; height:300px;"
@@ -107,10 +109,35 @@ https://codesandbox.io/s/ynn88nx9x?view=split
 
 #### Result
 
-```md
+```html
 <iframe
   src="https://codesandbox.io/embed/ynn88nx9x?view=split"
   style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+  allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb"
+  sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+></iframe>
+```
+
+### Slides
+
+#### Usage
+
+```md
+https://slides.com/kentcdodds/oss-we-want
+```
+
+#### Result
+
+```html
+<iframe
+  src="https://slides.com/kentcdodds/oss-we-want/embed"
+  width="576"
+  height="420"
+  scrolling="no"
+  frameborder="0"
+  webkitallowfullscreen
+  mozallowfullscreen
+  allowfullscreen
 ></iframe>
 ```
 
@@ -124,7 +151,7 @@ https://soundcloud.com/clemenswenners/africa
 
 #### Result
 
-```md
+```html
 <iframe
   width="100%"
   height="300"
@@ -153,7 +180,7 @@ https://twitter.com/MichaelDeBoey93/status/1152991421789548546
 
 #### Result
 
-```md
+```html
 <blockquote class="twitter-tweet" data-dnt="true">
   <p lang="en" dir="ltr" class="css-yw8fqx e11rucy10">
     Happy to announce I just published the first gatsby-remark-embedder 🎉🎉🎉
@@ -162,7 +189,9 @@ https://twitter.com/MichaelDeBoey93/status/1152991421789548546
     This first version is an extract of
     <a href="https://twitter.com/kentcdodds">@kentcdodds</a>' personal website
     remark-embedder plugin, but I'm planning on adding extra services then
-    <a href="https://twitter.com/codesandbox">@codesandbox</a>,<a href="https://twitter.com/Twitter">
+    <a href="https://twitter.com/codesandbox">@codesandbox</a>,<a
+      href="https://twitter.com/Twitter"
+    >
       @Twitter
     </a>
     &amp; <a href="https://twitter.com/YouTube">@YouTube</a> too.
@@ -191,7 +220,7 @@ https://youtu.be/dQw4w9WgXcQ
 
 #### Result
 
-```md
+```html
 <iframe
   width="100%"
   height="315"
@@ -282,6 +311,7 @@ MIT
 [gatsby]: https://github.com/gatsbyjs/gatsby
 [gatsby-plugin-twitter]: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-twitter
 [kentcdodds.com-repo]: https://github.com/kentcdodds/kentcdodds.com
+[slides]: https://slides.com
 [soundcloud]: https://soundcloud.com
 [twitter]: https://twitter.com
 [twitter-widget-javascript-docs]: https://developer.twitter.com/en/docs/twitter-for-websites/javascript-api/overview
